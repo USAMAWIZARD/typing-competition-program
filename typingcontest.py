@@ -39,6 +39,9 @@ while True:
                 writer = csv.writer(csvFile)
                 writer.writerow(datarow)
             csvFile.close()
-            values["name"]=None
+            window.FindElement('name').Update('')
+            window.FindElement('enrollmentno').Update('')
+            window.FindElement('name').Update('')
+            window.FindElement('usertyped').Update('')
         else:
             sg.PopupError("wrongpassword")
